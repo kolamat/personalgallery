@@ -125,6 +125,7 @@ body {
   border-radius: 2px;
   background: #5f7a61;
   transition: .7s;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 .play-btn span:nth-child(2) {
@@ -134,4 +135,46 @@ body {
 
 .play-btn.pause span:nth-child(2) {
   transform: translateY(50%) scale(0);
+}
+
+.play-btn.pause span:nth-child(1) {
+  width: 35%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  border-radius: 0;
+  clip-path: polygon(0 0, 100% 56%, 100% 56%, 0% 100%);
+}
+
+.play-btn.pause {
+  animation: pulse 2s linear infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0;
+  }
+
+  50% {
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
+  }
+
+  100% {
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.4);
+  }
+}
+
+.btn {
+  /* width: 10px;
+  height: 10px; */
+  background-color: #d5eebb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.backward-btn {
+  clip-path: polygon(55% 6%, 34% 35%, 34% 36%, 35% 65%, 35% 65%, 56% 91%, 0% 50%);
 }
