@@ -10,7 +10,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #5f7a61;
+  background: #4f9654;
   font-family: sans-serif;
 }
 
@@ -18,8 +18,120 @@ body {
   width: 350px;
   height: 550px;
   border-radius: 25px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 0, 0, 0.344);
   padding: 26px;
   overflow: hidden;
   color: #d7e1d8;
+}
+
+.music-name,
+.artist-name {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.music-name {
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.artist-name {
+  font-size: 20px;
+}
+
+.disk {
+  position: relative;
+  display: block;
+  margin: 40px auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-image: url(../mo--images/75125-Need-For-Speed-Most-Wanted-2005-Repack-Games.jpg);
+  background-size: cover;
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.08);
+}
+
+.disk::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #5d8a52;
+}
+
+.song-slider {
+  width: 100%;
+  position: relative;
+}
+
+.seek-bar {
+  appearance: none;
+  width: 100%;
+  height: 5px;
+  background: #5d8a52;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.seek-bar::-webkit-slider-thumb {
+  appearance: none;
+  width: 6px;
+  height: 20px;
+  background: #000;
+  box-shadow: -400px 0 0 400px #d5eebb;
+}
+
+.current-time,
+.song-duration {
+  font-size: 14px;
+}
+
+.song-duration {
+  position: absolute;
+  right: 0;
+}
+
+.controls {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.play-btn {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #d5eebb;
+  cursor: pointer;
+  border: none;
+}
+
+.play-btn span {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 30px;
+  border-radius: 2px;
+  background: #5f7a61;
+  transition: .7s;
+}
+
+.play-btn span:nth-child(2) {
+  left: 55%;
+  transform-origin: center;
+}
+
+.play-btn.pause span:nth-child(2) {
+  transform: translateY(50%) scale(0);
 }
