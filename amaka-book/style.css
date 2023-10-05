@@ -11,29 +11,29 @@
   transition: all .2s linear;
 }
 
-body {
-  margin-top: 5px;
-}
-
-h1 {
-  text-align: center;
-}
-
 .container {
+  margin-top: 5px;
   display: grid;
-  grid-template-rows: 2fr 2fr 2fr 2fr;
-  grid-template-columns: 2fr 2fr 2fr 2fr;
+  grid-template-rows: 1.5fr 3fr 2.5fr;
+  grid-template-columns: 2fr 2fr 2fr;
   grid-template-areas:
-    "header header header header"
-    "main main main main"
-    "footer footer footer footer"
+    "header header header"
+    "main main main"
+    "footer footer footer"
   ;
 }
 
-h1 {
+header {
   grid-area: header;
+  /* text-align: center; */
+  /* display: grid; */
 }
 
 footer {
   grid-area: footer;
+  display: flex;
 }
+
+/* p {
+  text-align: center;
+} */
