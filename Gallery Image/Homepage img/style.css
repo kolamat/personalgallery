@@ -6,9 +6,31 @@ body {
 }
 
 .decor {
-  width: 200px
+  width: 40rem;
+  height: 23rem;
+  background: linear-gradient(180deg, #426cf5, #42cef5);
+  padding: 10px;
+  text-align: center;
 }
 
 img {
   width: 100%;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(50);
+    animation-timing-function: ease-out;
+  }
+
+  50% {
+    transform: translateY(20px);
+    animation-timing-function: ease-in;
+  }
+
+
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
 }
